@@ -132,9 +132,10 @@ GameObject:
   - component: {fileID: 353938155}
   - component: {fileID: 353938158}
   - component: {fileID: 353938159}
+  - component: {fileID: 353938160}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: tagGround
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -225,7 +226,7 @@ Transform:
   m_GameObject: {fileID: 353938154}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.44, y: -1.45, z: 0}
+  m_LocalPosition: {x: -7.23, y: -1.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -304,6 +305,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.8125, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &353938160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353938154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30c9424d7ebd8544ba1cf08edb04c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 353938155}
+  jumpForce: 5
+  isground: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
