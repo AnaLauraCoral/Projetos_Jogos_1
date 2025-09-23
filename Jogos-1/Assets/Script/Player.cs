@@ -5,11 +5,9 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     public Animator anim;
     private Rigidbody2D rigd;
-    private float speed = 10;
-
-
+    private float speed = 6;
     public float jumpForce = 5f;
-    public bool isground;
+    private bool isground;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -55,17 +53,18 @@ public class NewMonoBehaviourScript : MonoBehaviour
             anim.SetInteger("transition", 2);
             isground = false;
         }
+    }
 
         void OnCollisionEnter2D(Collision2D collision)
         {
             if (collision.gameObject.tag == "tagGround")
             {
                 isground = true;
-                Debug.Log("esta no châo");
+                Debug.Log("esta no chao");
             }
         }
     }
 
 
 
-}
+
