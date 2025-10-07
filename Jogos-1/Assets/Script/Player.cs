@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
-
+    public Vector2 posicaoinicial;
+    public GameManager GameManager;
     public Animator anim;
     private Rigidbody2D rigd;
     private float speed = 6;
@@ -14,6 +15,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         
         anim = GetComponent<Animator>();
         rigd = GetComponent<Rigidbody2D>();
+        posicaoinicial = transform.position;
     }
 
     // Update is called once per frame
@@ -21,6 +23,12 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         Move();
         Jump();
+    }
+
+    public void Reiniciaposi()
+    {
+        transform.position = posicaoinicial;
+    
     }
 
     void Move()
@@ -59,8 +67,9 @@ public class NewMonoBehaviourScript : MonoBehaviour
         {
             if (collision.gameObject.tag == "tagGround")
             {
-                isground = true;
                 Debug.Log("esta no chao");
+                isground = true;
+                
             }
         }
     }

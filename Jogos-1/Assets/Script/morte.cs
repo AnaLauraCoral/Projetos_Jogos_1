@@ -1,10 +1,9 @@
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+public class morte : MonoBehaviour
+
 {
     public GameManager GameManager;
-    
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,14 +15,11 @@ public class Coin : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            GameManager.AddPontos(10);
-            Destroy(gameObject);
+            GameManager.Perdervida(1);
         }
     }
-
-
 }
