@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public Vector2 posicaoinicial;
     public GameManager GameManager;
