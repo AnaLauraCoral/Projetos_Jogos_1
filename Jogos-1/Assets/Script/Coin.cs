@@ -22,6 +22,9 @@ public class Coin : MonoBehaviour
         {
             GameManager.AddPontos(10);
             Destroy(gameObject);
+
+            PlayerSound som = collision.GetComponent<PlayerSound>();
+            som.PlaySFX(som.coinSound);
         }
     }
 
